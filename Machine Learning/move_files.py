@@ -24,8 +24,8 @@ def move_files_from_subdirs(parent_dir, destination_dir):
                     print(f"Moved {file_path} to {dest_path}")
 
 # Example usage
-parent_dir = os.path.join('Machine Learning', 'data', 'non_infant_cry')
-destination_dir = os.path.join('Machine Learning', 'data', 'non_infant_cry', 'convert_file')
+parent_dir = os.path.join('Machine Learning', 'data_wav', 'non_infant_cry')
+destination_dir = os.path.join('Machine Learning', 'data_wav', 'non_infant_cry', 'convert_file')
 
 # Assuming current working directory is 'Criby'
 move_files_from_subdirs(parent_dir, destination_dir)

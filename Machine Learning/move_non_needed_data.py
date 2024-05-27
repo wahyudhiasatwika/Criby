@@ -12,7 +12,7 @@ def move_folders(source_dir, destination_dir, exclude_folder):
                 print(f"Failed to move folder {folder_path}: {e}")
 
 # Source and destination directories
-source_dir = os.path.join('Machine Learning', 'data', 'non_infant_cry')
+source_dir = os.path.join('Machine Learning', 'data_wav', 'non_infant_cry')
 destination_dir = os.path.join('Machine Learning', 'original_data')
 exclude_folder = 'convert_file'
 
