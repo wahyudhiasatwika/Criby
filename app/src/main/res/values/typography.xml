@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="FontPoppinsBold">
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="FontPoppinsRegular">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="FontMontserrat">
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="FontMontserratRegular">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+</resources>

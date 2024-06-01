@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Criby</string>
+
+    <string name="full_name_must_field">Nama Lengkap harus diisi.</string>
+    <string name="email_must_field">Email harus diisi.</string>
+    <string name="password_must_field">Kata Sandi harus diisi.</string>
+    <string name="confirm_passowrd_must_field">Konfirmasi Kata Sandi harus diisi.</string>
+    <string name="valid_email">Silahkan masukkan email yang valid.</string>
+    <string name="valid_password">Kata Sandi harus memiliki panjang %1$d karakter.</string>
+    <string name="match_password">Konfirmasi Kata Sandi harus sama.</string>
+    <string name="term_and_condition_check">Syarat dan Ketentuan harus dicentang.</string>
+    <string name="login_successful">Berhasil masuk.</string>
+    <string name="account_created">Akun baru berhasil dibuat.</string>
+
 </resources>
