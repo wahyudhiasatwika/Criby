@@ -11,4 +11,5 @@
 
     <color name="colorBackground">#C1BFB9</color>
     <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorRed">#ed1c16</color>
 </resources>

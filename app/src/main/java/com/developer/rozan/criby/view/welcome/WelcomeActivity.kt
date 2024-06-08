@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.developer.rozan.criby.databinding.ActivityWelcomeBinding
+import com.developer.rozan.criby.view.home.HomeActivity
 import com.developer.rozan.criby.view.login.LoginActivity
 
 class WelcomeActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnStartNow.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
     }

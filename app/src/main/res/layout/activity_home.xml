@@ -27,8 +27,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title_app"
-        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">
+        app:layout_constraintTop_toBottomOf="@id/tv_title_app">
 
         <Button
             android:id="@+id/btn_record_audio"
@@ -69,8 +68,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_record_audio"
-        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">
+        app:layout_constraintTop_toBottomOf="@id/rl_record_audio">
 
         <Button
             android:id="@+id/btn_upload_audio"

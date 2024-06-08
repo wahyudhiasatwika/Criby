@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:paddingVertical="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/isi_chat_left"
+        style="@style/FontMontserratRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:background="@drawable/bg_chat_left"
+        android:maxWidth="@dimen/_240sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="hi man, how are you?"
+        android:textColor="@color/colorBlack" />
+
+    <TextView
+        android:id="@+id/isi_chat_error"
+        style="@style/FontPoppinsBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_error"
+        android:maxWidth="@dimen/_240sdp"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="Error"
+        android:textColor="@color/colorWhite"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/isi_chat_right"
+        style="@style/FontMontserratRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:background="@drawable/bg_chat_right"
+        android:maxWidth="@dimen/_240sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:text="hello, hello!"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>

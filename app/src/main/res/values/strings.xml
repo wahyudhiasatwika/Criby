@@ -12,4 +12,7 @@
     <string name="login_successful">Berhasil masuk.</string>
     <string name="account_created">Akun baru berhasil dibuat.</string>
 
+    <string name="recorder_permission_request_approved">Audio Recorder permission request approved, please click again.</string>
+    <string name="recorder_permission_request_denied">Audio Recorder permission request denied</string>
+
 </resources>

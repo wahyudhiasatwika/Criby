@@ -89,4 +89,7 @@ dependencies {
     // todo Kotlin Courotines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // todo Google AI
+    implementation("com.google.ai.client.generativeai:generativeai:0.6.0")
 }

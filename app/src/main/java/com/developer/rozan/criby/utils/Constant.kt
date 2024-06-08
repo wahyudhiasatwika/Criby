@@ -46,3 +46,8 @@ fun formatDate(timestamp: String): String {
 
     return DateFormat.getDateInstance(DateFormat.FULL).format(date)
 }
+
+fun getDate(): String {
+    val sdf = SimpleDateFormat("yyyy.MM.DD_hh.mm.ss")
+    return sdf.format(Date())
+}

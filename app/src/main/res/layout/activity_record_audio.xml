@@ -56,6 +56,20 @@
             android:background="@color/colorTransparent"
             android:src="@drawable/img_record_audio" />
 
+        <Button
+            android:id="@+id/btn_putar_suara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:backgroundTint="@color/colorPrimary1"
+            android:clickable="true"
+            android:elevation="@dimen/_3sdp"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="Putar Ulang Suara"
+            android:textColor="@color/colorWhite"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
         <TextView
             android:id="@+id/tv_result_audio"
             style="@style/FontMontserrat"
