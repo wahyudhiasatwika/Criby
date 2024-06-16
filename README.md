@@ -27,6 +27,7 @@ This endpoint is used to classify the uploaded audio file.
     "prediction": "Belly Pain",
     "confidence": 100.0
 }
+```
 
 **Example**:
 
