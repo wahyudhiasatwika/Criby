@@ -25,27 +25,23 @@ class PredictEndPoint(APIView):
     def post(self, *args, **kwargs):
         file_serializer = FileUploadSerializer(data=self.request.data)
         if file_serializer.is_valid():
-            # Save the uploaded file to a temporary location
             uploaded_file = self.request.FILES['file']
             with tempfile.NamedTemporaryFile(delete=False) as temp_file:
                 temp_file.write(uploaded_file.read())
                 temp_filename = temp_file.name
 
             try:
-                # Load and process the audio data
                 data = load_data(temp_filename, self.inceptionv3)
 
-                # Make predictions using the model
                 pred = self.model.predict(data)
                 prediction = np.argmax(pred)
                 confidence = np.max(pred)
 
-                # Return prediction result
-                return Response(data={'predictions': prediction, 'confidence': float(confidence)}, status=status.HTTP_200_OK)
-
             finally:
-                # Delete the temporary file after processing
                 if os.path.exists(temp_filename):
                     os.remove(temp_filename)
+
+            return Response(data={'predictions': prediction, 'confidence': float(confidence)},
+                            status=status.HTTP_200_OK)
 
         return Response(file_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
