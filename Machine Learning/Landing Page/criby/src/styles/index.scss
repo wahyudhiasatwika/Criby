@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import 'layouts/layouts';
+
+@import 'base';
+@import 'utilities';
+
+// COMPONENTS
+@import 'components/commons/button';
+// @import 'components/commons/loader';
+
+// SECTIONS
+// @import 'sections/loading'

@@ -1,0 +1,9 @@
+# Ignore built files
+build/
+
+# Ignore directories
+node_modules/
+dist/
+
+# Exclude specific files from patterns
+!src/index.js

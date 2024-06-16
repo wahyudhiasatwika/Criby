@@ -1,0 +1,15 @@
+#layout-default {
+    @apply relative flex flex-col w-screen h-auto min-h-screen bg-[#D9E0EC33];
+    overflow-x: hidden;
+    header.header {
+        @apply flex md:flex-row flex-col justify-between items-center w-full md:px-24 sm:px-14 px-4 md:h-28 md:py-0 p-2 shadow-lg;
+    }
+
+    main.main {
+        @apply flex flex-col h-full w-full md:pt-[110px] pt-[60px];
+    }
+
+    footer.footer {
+        @apply flex flex-col justify-between items-start w-full md:px-24 sm:px-14 px-4  py-12 bg-white;
+    }
+}
