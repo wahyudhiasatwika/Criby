@@ -5,6 +5,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework import status
+from rest_framework.renderers import JSONRenderer
 from tensorflow.keras.models import load_model
 from django.conf import settings
 
@@ -19,6 +20,7 @@ class PredictEndPoint(APIView):
     model = load_model(os.path.join(settings.MEDIA_ROOT, 'model_v2.h5'))
     inceptionv3 = hub.KerasLayer('https://www.kaggle.com/models/google/inception-v3/TensorFlow2/feature-vector/2')
     data_dict = {3: 'hungry', 1: 'burping', 2: 'discomfort', 0: 'belly_pain', 4: 'tired'}
+    renderer_classes = [JSONRenderer,]
 
     def get(self, *args, **kwargs):
         return Response()
