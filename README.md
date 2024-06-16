@@ -21,6 +21,13 @@ This endpoint is used to classify the uploaded audio file.
 - Key name: `file`
 - Supported audio file extensions: Any
 
+**Return Example**:
+```json
+{
+    "prediction": "Belly Pain",
+    "confidence": 100.0
+}
+
 **Example**:
 
 ```bash
