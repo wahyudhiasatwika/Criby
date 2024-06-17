@@ -23,7 +23,7 @@ BASE_DIR = dirname(dirname(abspath(__file__)))
 SECRET_KEY = 'django-insecure-307%7*@#1j++fvx9594&)3)-u#q=#+qhe48&ysu9wnb6o_6*p%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://saqku.zaws.net",
+    "https://criby.app",
+    "https://model.criby.app"
 ]
 SECURE_REFERRER_POLICY = 'same-origin'
 
