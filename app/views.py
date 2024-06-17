@@ -60,7 +60,7 @@ class PredictEndPoint(APIView):
                 if os.path.exists(temp_filename):
                     os.remove(temp_filename)
 
-            save_dir = os.path.join(settings.MEDIA_ROOT, 'result', pred_result)
+            save_dir = os.path.join(settings.MEDIA_ROOT, 'result', str(prediction))
             if not os.path.exists(save_dir):
                 os.mkdir(save_dir)
 

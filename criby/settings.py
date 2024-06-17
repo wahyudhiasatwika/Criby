@@ -44,8 +44,6 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://saqku.zaws.net",
-    "https://criby.app",
-    "https://model.criby.app"
 ]
 SECURE_REFERRER_POLICY = 'same-origin'
 
