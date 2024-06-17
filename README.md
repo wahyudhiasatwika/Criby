@@ -9,7 +9,7 @@ This endpoint is used to classify the uploaded audio file.
 
 #### Method
 
-- **GET**: Returns an empty response.
+- **GET**: Returns an empty response or maybe redirected to [criby.app](https://criby.app)
 - **POST**: Accepts an audio file and returns the classification result.
 
 #### Request
