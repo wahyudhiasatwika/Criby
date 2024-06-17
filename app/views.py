@@ -9,6 +9,8 @@ from rest_framework.renderers import JSONRenderer
 from tensorflow.keras.models import load_model
 from django.conf import settings
 from shutil import copyfileobj
+from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
 
 from .serializer import FileUploadSerializer
 from .utils import *
@@ -26,7 +28,7 @@ class PredictEndPoint(APIView):
     allowed_file_extension = ['mp3', 'wav', 'mp4', 'm4a']
 
     def get(self, *args, **kwargs):
-        return Response()
+        return HttpResponseRedirect('https://criby.app')
 
     def post(self, *args, **kwargs):
         file_serializer = FileUploadSerializer(data=self.request.data)
@@ -70,3 +72,7 @@ class PredictEndPoint(APIView):
                             status=status.HTTP_200_OK)
 
         return Response({'error': file_serializer.errors['file']}, status=status.HTTP_400_BAD_REQUEST)
+
+
+def goto_domain(request):
+    return redirect('https://criby.app')
