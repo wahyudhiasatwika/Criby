@@ -6,7 +6,7 @@
 An application to help mother to understand why her baby is crying.
 
 ## Usage
-Tap to record the audio and then let your phone to the magic
+Tap to record the audio and then let your phone to the magic <br>
 ![Record Now!](/imgs/record.png)
 
 
