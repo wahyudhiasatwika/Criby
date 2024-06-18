@@ -19,9 +19,9 @@ Login with your Google Account to get more features such as ChatBot.
 ## Our Teams
 | Name  | University  | Student ID | Learning Path |
 |----------|---------------|---------------|---------------|
-| Raden R. Bintang P. P | Institut Teknologi PLN      | SID       | Machine Learning       |
-| Wahyu Dhia Satwika | Universitas Pembangunan Veteran Jakarta      | Data 2B       | Machine Learning       |
-| Irham Ahmad Rozan | Institut Teknologi PLN      | Data 3B       | Mobile Development    |
-| Kenny Christy Nehe | Data 4A      | Data 4B       | Mobile Development    |
-| Aulia Razak Akmal | Data 5A      | Data 5B       | Cloud Computing |
-| Tri Wahyudi | Data 6A      | Data 6B       | Cloud Computing |
+| Raden R. Bintang P. P | Institut Teknologi PLN      | M118D4KY3137   | Machine Learning       |
+| Wahyu Dhia Satwika | Universitas Pembangunan Veteran Jakarta      | M295D4KY1850       | Machine Learning       |
+| Irham Ahmad Rozan | Institut Teknologi PLN      | A118D4KY4426       | Mobile Development    |
+| Kenny Christy Nehe | Data 4A      | A240D4KX4341       | Mobile Development    |
+| Aulia Razak Akmal | Data 5A      | C132D4KY0205       | Cloud Computing |
+| Tri Wahyudi | Data 6A      | C132D4KY0187      | Cloud Computing |
