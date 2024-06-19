@@ -1,13 +1,16 @@
 package com.developer.rozan.criby.view.chatbot
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.developer.rozan.criby.data.local.entity.ChatMessageEntity
 import com.developer.rozan.criby.databinding.ItemChatBinding
+import com.developer.rozan.criby.utils.Participant
 import com.developer.rozan.criby.utils.gone
 import com.developer.rozan.criby.utils.visible
 
-class ChatbotAdapter(private val chatMessages: List<ChatMessage>) :
+class ChatbotAdapter(private var chatMessages: List<ChatMessageEntity>) :
     RecyclerView.Adapter<ChatbotAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +33,7 @@ class ChatbotAdapter(private val chatMessages: List<ChatMessage>) :
     }
 
     class ViewHolder(private val view: ItemChatBinding) : RecyclerView.ViewHolder(view.root) {
-        fun bind(chatMessage: ChatMessage) {
+        fun bind(chatMessage: ChatMessageEntity) {
             when (chatMessage.participant) {
                 Participant.MODEL -> {
                     view.isiChatLeft.visible()
@@ -54,5 +57,11 @@ class ChatbotAdapter(private val chatMessages: List<ChatMessage>) :
                 }
             }
         }
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateMessages(newMessages: List<ChatMessageEntity>) {
+        chatMessages = newMessages
+        notifyDataSetChanged()
     }
 }

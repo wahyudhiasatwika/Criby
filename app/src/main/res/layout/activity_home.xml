@@ -5,129 +5,183 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_home"
-    android:paddingHorizontal="@dimen/_24sdp"
     tools:context=".view.home.HomeActivity">
 
-    <TextView
-        android:id="@+id/tv_title_app"
-        style="@style/FontPoppinsBold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_15sdp"
-        android:text="@string/app_name"
-        android:textColor="@color/colorBlack"
-        android:textSize="@dimen/_26ssp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <RelativeLayout
-        android:id="@+id/rl_record_audio"
+        android:id="@+id/top_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_24sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_title_app">
-
-        <Button
-            android:id="@+id/btn_record_audio"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/colorPrimary2"
-            android:clickable="true"
-            android:elevation="@dimen/_3sdp"
-            android:focusable="true"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/colorWhite"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            style="@style/FontMontserrat"
+            android:id="@+id/tv_title_app"
+            style="@style/FontPoppinsBold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:text="Rekam Suara"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/_13ssp" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/_25sdp"
-            android:src="@drawable/img_mom_with_baby" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/rl_upload_audio"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_record_audio">
-
-        <Button
-            android:id="@+id/btn_upload_audio"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:backgroundTint="@color/colorPrimary1"
-            android:clickable="true"
-            android:elevation="@dimen/_3sdp"
-            android:focusable="true"
-            android:fontFamily="@font/montserrat"
-            android:textColor="@color/colorWhite"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/_25sdp"
-            android:scaleX="-1"
-            android:src="@drawable/img_mom_with_baby" />
-
-        <TextView
-            style="@style/FontMontserrat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_25sdp"
-            android:text="Unggah Suara"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/_13ssp" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_24sdp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_upload_audio">
-
-        <TextView
-            style="@style/FontMontserrat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kenali Tangisan Bayi"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:text="@string/app_name"
             android:textColor="@color/colorBlack"
-            android:textSize="@dimen/_13ssp" />
+            android:textSize="@dimen/_26ssp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_cry_baby"
+        <ImageView
+            android:id="@+id/iv_history"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/iv_logout"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_14sdp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/ic_history"
+            app:tint="@color/colorBlack" />
+
+        <ImageView
+            android:id="@+id/iv_logout"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_14sdp"
+            android:scaleX="1.1"
+            android:scaleY="1.1"
+            android:src="@drawable/ic_logout"
+            app:tint="@color/colorBlack" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_24sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/_5sdp"
-            app:spanCount="2"
-            tools:itemCount="5"
-            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            tools:listitem="@layout/item_cry_baby" />
-    </LinearLayout>
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rl_record_audio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/btn_record_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorPrimary1"
+                    android:clickable="true"
+                    android:elevation="@dimen/_3sdp"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colorWhite"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+                <TextView
+                    style="@style/FontMontserrat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Rekam Suara"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:src="@drawable/img_mom_with_baby" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_upload_audio"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_record_audio">
+
+                <Button
+                    android:id="@+id/btn_upload_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorPrimary1"
+                    android:clickable="true"
+                    android:elevation="@dimen/_3sdp"
+                    android:focusable="true"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colorWhite"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/_25sdp"
+                    android:scaleX="-1"
+                    android:src="@drawable/img_mom_with_baby" />
+
+                <TextView
+                    style="@style/FontMontserrat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:text="Unggah Suara"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/_13ssp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rl_upload_audio">
+
+                <TextView
+                    style="@style/FontMontserrat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kenali Tangisan Bayi"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_cry_baby"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:spanCount="2"
+                    tools:itemCount="5"
+                    tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/item_cry_baby" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,16 +13,31 @@ import com.developer.rozan.criby.utils.closeKeyboard
 import com.developer.rozan.criby.utils.isValidEmail
 import com.developer.rozan.criby.utils.showKeyboard
 import com.developer.rozan.criby.utils.showSnackBar
+import com.developer.rozan.criby.utils.showToast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
+    private lateinit var auth: FirebaseAuth
+    private lateinit var firestore: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        auth = FirebaseAuth.getInstance()
+        firestore = FirebaseFirestore.getInstance()
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                textWatchers()
+            }
+        }
 
         binding.ivBack.setOnClickListener {
             finish()
@@ -39,22 +54,45 @@ class RegisterActivity : AppCompatActivity() {
             val confirmPassword = binding.tfConfirmPassword.editText?.text.toString()
 
             if (validateRegister(fullName, email, password, confirmPassword)) {
-                lifecycleScope.launch {
+                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        showSnackBar(
+                            this@RegisterActivity,
+                            resources.getString(R.string.account_created)
+                        )
+                        saveUserData(fullName)
+                    }
+                }.addOnFailureListener {
                     showSnackBar(
                         this@RegisterActivity,
-                        resources.getString(R.string.account_created)
+                        it.localizedMessage?.toString() ?: "Gagal membuat akun baru."
                     )
+                }
+            }
+        }
+    }
+
+    private fun saveUserData(fullName: String) {
+        val user = auth.currentUser ?: return
+        val userData = mapOf(
+            "name" to fullName
+        )
+
+        firestore.collection("users").document(user.uid)
+            .set(userData)
+            .addOnSuccessListener {
+                auth.signOut()
+                lifecycleScope.launch {
                     delay(DELAY_1500L)
                     finish()
                 }
             }
-        }
-
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                textWatchers()
+            .addOnFailureListener {
+                showToast(
+                    this,
+                    it.localizedMessage?.toString() ?: "Gagal menambahkan user name."
+                )
             }
-        }
     }
 
     private fun validateRegister(

@@ -1,23 +1,25 @@
 package com.developer.rozan.criby.view.chatbot
 
 import androidx.compose.runtime.toMutableStateList
+import com.developer.rozan.criby.data.local.entity.ChatMessageEntity
+import com.developer.rozan.criby.utils.Participant
 
 class ChatUiState(
-    messages: List<ChatMessage> = emptyList()
+    messages: List<ChatMessageEntity> = emptyList()
 ) {
-    private val _messages: MutableList<ChatMessage> = messages.toMutableStateList()
-    val messages: List<ChatMessage> = _messages
+    private val _messages: MutableList<ChatMessageEntity> = messages.toMutableStateList()
+    val messages: List<ChatMessageEntity> = _messages
 
-    fun addMessage(msg: ChatMessage) {
+    fun addMessage(msg: ChatMessageEntity) {
         _messages.add(msg)
     }
 
-    fun replaceLastPendingMessage() {
-        val lastMessage = _messages.lastOrNull()
+    fun replaceLastPendingMessage(role: Participant, newText: String) {
+        val lastMessage = _messages.lastOrNull { it.isPending }
         lastMessage?.let {
-            val newMessage = lastMessage.apply { isPending = false }
-            _messages.removeLast()
-            _messages.add(newMessage)
+            val newMessage = it.copy(participant = role, text = newText, isPending = false)
+            val lastIndex = _messages.indexOf(it)
+            _messages[lastIndex] = newMessage
         }
     }
 }

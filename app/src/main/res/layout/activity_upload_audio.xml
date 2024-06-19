@@ -24,7 +24,7 @@
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/_12sdp"
+            android:padding="@dimen/_14sdp"
             android:src="@drawable/ic_back"
             app:tint="@color/colorBlack" />
 
@@ -35,7 +35,7 @@
             android:layout_centerInParent="true"
             android:text="Unggah Suara"
             android:textColor="@color/colorBlack"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_18ssp" />
     </RelativeLayout>
 
     <LinearLayout

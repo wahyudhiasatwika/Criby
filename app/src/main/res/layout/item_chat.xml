@@ -17,7 +17,9 @@
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_8sdp"
         android:text="hi man, how are you?"
-        android:textColor="@color/colorBlack" />
+        android:textColor="@color/colorBlack"
+        android:textIsSelectable="true"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/isi_chat_error"
@@ -31,6 +33,8 @@
         android:paddingVertical="@dimen/_8sdp"
         android:text="Error"
         android:textColor="@color/colorWhite"
+        android:textIsSelectable="true"
+        android:textStyle="bold"
         android:visibility="gone" />
 
     <TextView
@@ -45,5 +49,7 @@
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_8sdp"
         android:text="hello, hello!"
-        android:textColor="@color/colorWhite" />
+        android:textColor="@color/colorWhite"
+        android:textIsSelectable="true"
+        android:textStyle="bold" />
 </RelativeLayout>

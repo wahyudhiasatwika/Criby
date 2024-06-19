@@ -14,23 +14,39 @@ import com.developer.rozan.criby.utils.closeKeyboard
 import com.developer.rozan.criby.utils.isValidEmail
 import com.developer.rozan.criby.utils.showKeyboard
 import com.developer.rozan.criby.utils.showSnackBar
+import com.developer.rozan.criby.view.forgotpassword.ForgotPasswordActivity
 import com.developer.rozan.criby.view.home.HomeActivity
 import com.developer.rozan.criby.view.register.RegisterActivity
 import com.developer.rozan.criby.view.welcome.WelcomeActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        auth = FirebaseAuth.getInstance()
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                textWatchers()
+            }
+        }
+
         binding.ivBack.setOnClickListener {
             startActivity(Intent(this, WelcomeActivity::class.java))
             finish()
+        }
+
+        binding.btnForgotPassword.setOnClickListener {
+            startActivity(Intent(this, ForgotPasswordActivity::class.java))
         }
 
         binding.btnRegister.setOnClickListener {
@@ -42,18 +58,24 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.tfPassword.editText?.text.toString()
 
             if (validateLogin(email, password)) {
-                lifecycleScope.launch {
-                    showSnackBar(this@LoginActivity, resources.getString(R.string.login_successful))
-                    delay(DELAY_1500L)
-                    toHomeActivity()
-                    finish()
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        lifecycleScope.launch {
+                            showSnackBar(
+                                this@LoginActivity,
+                                resources.getString(R.string.login_successful)
+                            )
+                            delay(DELAY_1500L)
+                            toHomeActivity()
+                            finish()
+                        }
+                    }
+                }.addOnFailureListener {
+                    showSnackBar(
+                        this@LoginActivity,
+                        it.localizedMessage?.toString() ?: "Gagal masuk."
+                    )
                 }
-            }
-        }
-
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                textWatchers()
             }
         }
     }

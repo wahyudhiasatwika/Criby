@@ -84,7 +84,7 @@
             android:hint="Kata Sandi"
             app:endIconMode="password_toggle"
             app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
-            app:startIconDrawable="@drawable/ic_password">
+            app:startIconDrawable="@drawable/ic_lock">
 
             <com.google.android.material.textfield.TextInputEditText
                 style="@style/FontMontserratRegular"

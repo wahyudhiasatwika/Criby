@@ -7,10 +7,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_cry_baby"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_150sdp"
+        android:layout_height="@dimen/_130sdp"
         android:layout_margin="@dimen/_8sdp"
         android:clickable="true"
         android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         app:cardCornerRadius="@dimen/_15sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,10 +39,10 @@
                 style="@style/FontMontserratRegular"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_6sdp"
-                android:textSize="@dimen/_12ssp"
+                android:layout_marginTop="@dimen/_6sdp"
                 android:text="Lapar"
-                android:textColor="@color/colorBlack" />
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_12ssp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

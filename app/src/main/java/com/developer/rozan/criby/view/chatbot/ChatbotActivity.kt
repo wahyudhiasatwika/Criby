@@ -18,41 +18,48 @@ class ChatbotActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityChatbotBinding
     private lateinit var chatbotViewModel: ChatbotViewModel
-    private lateinit var chatbotAdapter: ChatbotAdapter
+    private val chatbotAdapter by lazy { ChatbotAdapter(emptyList()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityChatbotBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setToolbar("Kembali")
-
-        chatbotViewModel = obtainViewModel(this)
+        setupToolbar("Kembali")
+        setupViewModel()
+        setupRecyclerView()
+        setupChat()
 
         binding.btnSend.setOnClickListener {
-            val text = binding.tfTextHere.editText?.text.toString()
+            val text = binding.tfTextHere.text.toString()
 
             if (validateTextChat(text)) {
                 chatbotViewModel.sendMessage(text)
-                binding.tfTextHere.editText?.setText("")
-            }
-        }
-
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                setUpChat()
+                binding.tfTextHere.setText("")
             }
         }
     }
 
-    private fun setUpChat() {
-        binding.rvListChat.layoutManager = LinearLayoutManager(this)
-        binding.rvListChat.setHasFixedSize(true)
+    private fun setupRecyclerView() {
+        binding.rvListChat.apply {
+            layoutManager = LinearLayoutManager(this@ChatbotActivity)
+            setHasFixedSize(true)
+            adapter = chatbotAdapter
+        }
+    }
 
-        chatbotViewModel.uiState.observe(this) {
-            chatbotAdapter = ChatbotAdapter(it.messages)
-            binding.rvListChat.adapter = chatbotAdapter
-            binding.rvListChat.scrollToPosition(0)
+    private fun setupViewModel() {
+        chatbotViewModel = obtainViewModel(this)
+    }
+
+    private fun setupChat() {
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                chatbotViewModel.uiState.observe(this@ChatbotActivity) {
+                    chatbotAdapter.updateMessages(it.messages)
+                    binding.rvListChat.scrollToPosition(it.messages.size - 1)
+                }
+            }
         }
     }
 
@@ -62,7 +69,7 @@ class ChatbotActivity : AppCompatActivity() {
         return when {
             text.isEmpty() -> {
                 binding.tfTextHere.requestFocus()
-                showKeyboard(this, binding.tfTextHere.editText!!)
+                showKeyboard(this, binding.tfTextHere)
                 showToast(this, "Silahkan masukkan pesan.")
                 false
             }
@@ -73,7 +80,7 @@ class ChatbotActivity : AppCompatActivity() {
         }
     }
 
-    private fun setToolbar(title: String) {
+    private fun setupToolbar(title: String) {
         setSupportActionBar(binding.toolbarChatbot)
         supportActionBar?.apply {
             setDisplayShowHomeEnabled(true)
@@ -88,7 +95,7 @@ class ChatbotActivity : AppCompatActivity() {
     }
 
     private fun obtainViewModel(activity: AppCompatActivity): ChatbotViewModel {
-        val factory = ViewModelFactory.getInstance()
+        val factory = ViewModelFactory.getInstance(activity.application)
         return ViewModelProvider(activity, factory)[ChatbotViewModel::class.java]
     }
 }

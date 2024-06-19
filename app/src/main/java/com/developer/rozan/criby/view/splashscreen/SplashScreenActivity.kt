@@ -10,17 +10,22 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.developer.rozan.criby.R
 import com.developer.rozan.criby.databinding.ActivitySplashScreenBinding
 import com.developer.rozan.criby.utils.DELAY_1500L
+import com.developer.rozan.criby.view.home.HomeActivity
 import com.developer.rozan.criby.view.welcome.WelcomeActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SplashScreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashScreenBinding
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        auth = FirebaseAuth.getInstance()
 
         binding.image.startAnimation(
             AnimationUtils.loadAnimation(
@@ -38,6 +43,12 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun toNextActivity() {
-        startActivity(Intent(this, WelcomeActivity::class.java))
+        if (auth.currentUser != null) {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
+        } else {
+            startActivity(Intent(this, WelcomeActivity::class.java))
+            finish()
+        }
     }
 }

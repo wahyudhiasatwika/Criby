@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_detail"
+    tools:context=".view.detailcrybaby.DetailCryBabyActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_14sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorBlack" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/FontPoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Hasil Prediksi"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_topbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/_24sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/img_mom_with_baby" />
+
+            <TextView
+                android:id="@+id/tv_desc_cry_baby"
+                style="@style/FontMontserratRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/_11ssp"
+                tools:text="@tools:sample/lorem/random" />
+
+            <Button
+                android:id="@+id/btn_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="?attr/actionBarSize"
+                android:backgroundTint="@color/colorPrimary1"
+                android:clickable="true"
+                android:elevation="@dimen/_3sdp"
+                android:focusable="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Sumber Referensi"
+                android:textColor="@color/colorWhite"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "234064435030",
+    "project_id": "criby-fc538",
+    "storage_bucket": "criby-fc538.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234064435030:android:97321a9cdc9e1815dc28f7",
+        "android_client_info": {
+          "package_name": "com.developer.rozan.criby"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfCXbiBQLCRJnbTQwLMID_MBnJ3fxJ3iQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

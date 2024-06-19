@@ -24,7 +24,7 @@
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackgroundBorderless"
-            android:padding="@dimen/_12sdp"
+            android:padding="@dimen/_14sdp"
             android:src="@drawable/ic_back"
             app:tint="@color/colorBlack" />
 
@@ -35,7 +35,7 @@
             android:layout_centerInParent="true"
             android:text="Rekam Suara"
             android:textColor="@color/colorBlack"
-            android:textSize="@dimen/_20ssp" />
+            android:textSize="@dimen/_18ssp" />
     </RelativeLayout>
 
     <LinearLayout
@@ -55,43 +55,5 @@
             android:layout_height="wrap_content"
             android:background="@color/colorTransparent"
             android:src="@drawable/img_record_audio" />
-
-        <Button
-            android:id="@+id/btn_putar_suara"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:backgroundTint="@color/colorPrimary1"
-            android:clickable="true"
-            android:elevation="@dimen/_3sdp"
-            android:focusable="true"
-            android:fontFamily="@font/montserrat"
-            android:text="Putar Ulang Suara"
-            android:textColor="@color/colorWhite"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
-
-        <TextView
-            android:id="@+id/tv_result_audio"
-            style="@style/FontMontserrat"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_25sdp"
-            android:text="Hasil Deteksi"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/_13ssp" />
-
-        <Button
-            android:id="@+id/btn_chatbot"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="?attr/actionBarSize"
-            android:backgroundTint="@color/colorPrimary1"
-            android:clickable="true"
-            android:elevation="@dimen/_3sdp"
-            android:focusable="true"
-            android:fontFamily="@font/montserrat"
-            android:text="Chat with ChathBot"
-            android:textColor="@color/colorWhite"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

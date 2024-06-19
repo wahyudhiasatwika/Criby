@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     android:padding="@dimen/_24ssp"
     tools:context=".view.welcome.WelcomeActivity">
 
@@ -26,14 +27,13 @@
                 android:layout_height="@dimen/_50sdp"
                 android:scaleX="2"
                 android:scaleY="2"
-                android:src="@drawable/ic_launcher_foreground"
-                app:tint="@color/colorPrimary1" />
+                android:src="@drawable/ic_logo2" />
 
             <TextView
                 style="@style/FontPoppinsBold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:text="Criby"
                 android:textSize="@dimen/_16ssp" />
         </LinearLayout>

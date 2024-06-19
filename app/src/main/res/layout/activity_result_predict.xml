@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_detail"
+    tools:context=".view.resultpredict.ResultPredictActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentStart="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_14sdp"
+            android:src="@drawable/ic_back"
+            app:tint="@color/colorBlack" />
+
+        <TextView
+            style="@style/FontPoppinsBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Hasil Prediksi"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_18ssp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_24sdp"
+        app:layout_constraintBottom_toTopOf="@id/btn_save_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_topbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_10sdp">
+
+            <ImageButton
+                android:id="@+id/btn_play_audio"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:background="@color/colorTransparent"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/ic_play"
+                app:tint="@color/colorPrimary1" />"
+
+            <SeekBar
+                android:id="@+id/progress_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/btn_play_audio"
+                android:progress="60"
+                android:progressTint="@color/colorPrimary1"
+                android:thumbTint="@color/colorPrimary1" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/FontMontserrat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="Hasil Deteksi"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_13ssp" />
+
+        <TextView
+            android:id="@+id/tv_result_audio"
+            style="@style/FontMontserratRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/tv_desc_result_audio"
+            style="@style/FontMontserratRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:maxLines="15"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_11ssp"
+            tools:text="@tools:sample/lorem/random" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24sdp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/colorPrimary1"
+        android:clickable="true"
+        android:elevation="@dimen/_3sdp"
+        android:focusable="true"
+        android:fontFamily="@font/montserrat"
+        android:text="Simpan Hasil Prediksi"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@id/btn_chatbot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+    <Button
+        android:id="@+id/btn_chatbot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24sdp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:backgroundTint="@color/colorPrimary1"
+        android:clickable="true"
+        android:elevation="@dimen/_3sdp"
+        android:focusable="true"
+        android:fontFamily="@font/montserrat"
+        android:text="Bertanya dengan Chatbot"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

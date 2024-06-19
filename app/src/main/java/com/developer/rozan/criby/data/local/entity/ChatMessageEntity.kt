@@ -1,12 +1,9 @@
-package com.developer.rozan.criby.view.chatbot
+package com.developer.rozan.criby.data.local.entity
 
+import com.developer.rozan.criby.utils.Participant
 import java.util.UUID
 
-enum class Participant {
-    USER, MODEL, ERROR
-}
-
-data class ChatMessage(
+data class ChatMessageEntity(
     val id: String = UUID.randomUUID().toString(),
     var text: String = "",
     val participant: Participant = Participant.USER,

@@ -17,6 +17,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/imagePlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_chatbot" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list_chat"
         android:layout_width="match_parent"
@@ -24,7 +34,7 @@
         app:layout_constraintBottom_toTopOf="@id/cl_chat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_chatbot"
+        app:layout_constraintTop_toBottomOf="@id/imagePlaceholder"
         tools:listitem="@layout/item_chat" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,24 +48,38 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
             android:id="@+id/tf_text_here"
+            style="@style/FontMontserratRegular"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:endIconMode="clear_text"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/bg_edittext"
+            android:hint="Ketik di sini."
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_send"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                style="@style/FontMontserratRegular"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Text here ..."
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/tf_text_here"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:endIconMode="clear_text"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toStartOf="@id/btn_send"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent"-->
+        <!--            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                style="@style/FontMontserratRegular"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:hint="Text here ..."-->
+        <!--                android:inputType="text" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <RelativeLayout
             android:id="@+id/btn_send"
@@ -63,7 +87,7 @@
             android:layout_height="@dimen/_40sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:background="@drawable/bg_error"
-            android:backgroundTint="@color/colorBackground"
+            android:backgroundTint="@color/colorPrimary2"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackgroundBorderless"
@@ -76,7 +100,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:src="@drawable/ic_send" />
+                android:src="@drawable/ic_send"
+                app:tint="@color/colorWhite" />
         </RelativeLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnStartNow.setOnClickListener {
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }
     }
