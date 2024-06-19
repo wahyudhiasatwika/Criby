@@ -62,10 +62,7 @@ class PredictEndPoint(APIView):
 
             save_dir = os.path.join(settings.MEDIA_ROOT, 'result', str(prediction))
             if not os.path.exists(save_dir):
-                try:
-                    os.mkdir(save_dir)
-                except Exception:
-                    os.mkdirs(save_dir)
+                os.mkdir(save_dir, exist_ok=True)
 
             save_path = os.path.join(save_dir, uploaded_file.name)
             with open(save_path, 'wb+') as destination:
