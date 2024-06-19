@@ -10,7 +10,7 @@ from tensorflow.keras.models import load_model
 from django.conf import settings
 from shutil import copyfileobj
 from django.shortcuts import redirect
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse, Http404
 
 from .serializer import FileUploadSerializer
 from .utils import *
@@ -76,3 +76,13 @@ class PredictEndPoint(APIView):
 
 def goto_domain(request):
     return redirect('https://criby.app')
+
+
+def download_file(request):
+    file_path = os.path.join(settings.STATICFILES_DIRS[0], 'apk', 'name.apk')
+    if os.path.exists(file_path):
+        with open(file_path, 'rb') as fp:
+            response = HttpResponse(fp.read(), content_type='application/file')
+            response['Content-Disposition'] = f"inline; filename={os.path.basename(file_path)}"
+            return response
+    raise Http404
