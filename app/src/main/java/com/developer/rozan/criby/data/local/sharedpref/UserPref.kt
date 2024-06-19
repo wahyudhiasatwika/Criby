@@ -23,10 +23,10 @@ class UserPref(context: Context) {
 //    fun logout() {
 //        this.sharedPreferences.edit().clear().apply()
 //    }
-//
-//    fun saveUser(name: String) {
-//        this.sharedPreferences.edit().putString(PREF_NAME, name).apply()
-//    }
+
+    fun saveUser(name: String) {
+        this.sharedPreferences.edit().putString(PREF_NAME, name).apply()
+    }
 
     fun getUser(): String {
         return sharedPreferences.getString(PREF_NAME, null).toString()

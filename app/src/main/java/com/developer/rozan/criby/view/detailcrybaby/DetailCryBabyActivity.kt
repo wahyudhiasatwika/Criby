@@ -5,12 +5,11 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
+import com.bumptech.glide.Glide
 import com.developer.rozan.criby.R
 import com.developer.rozan.criby.data.local.entity.CryBabyEntity
-import com.developer.rozan.criby.data.remote.response.PredictionResponse
 import com.developer.rozan.criby.databinding.ActivityDetailCryBabyBinding
 import com.developer.rozan.criby.utils.CRY_BABY_ENTITY
-import com.developer.rozan.criby.utils.PREDICTION_RESPONSE
 
 class DetailCryBabyActivity : AppCompatActivity() {
 
@@ -28,6 +27,11 @@ class DetailCryBabyActivity : AppCompatActivity() {
 
         binding.tvTitle.text = cryBabyEntity?.title
         binding.tvDescCryBaby.text = cryBabyEntity?.description
+        Glide.with(binding.ivImageCryBaby)
+            .load(cryBabyEntity?.image)
+            .placeholder(R.drawable.img_mom_with_baby)
+            .error(R.drawable.img_mom_with_baby)
+            .into(binding.ivImageCryBaby)
 
         binding.ivBack.setOnClickListener {
             finish()

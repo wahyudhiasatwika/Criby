@@ -8,7 +8,6 @@ import android.media.MediaRecorder
 import android.os.Build
 import android.util.Log
 import com.developer.rozan.criby.utils.addWavHeader
-import com.developer.rozan.criby.utils.showSnackBar
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException

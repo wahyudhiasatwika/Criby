@@ -1,6 +1,5 @@
 package com.developer.rozan.criby.view.history
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

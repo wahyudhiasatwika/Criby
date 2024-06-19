@@ -20,7 +20,6 @@ import com.developer.rozan.criby.view.detailcrybaby.DetailCryBabyActivity
 import com.developer.rozan.criby.view.history.HistoryActivity
 import com.developer.rozan.criby.view.recordaudio.RecordAudioActivity
 import com.developer.rozan.criby.view.splashscreen.SplashScreenActivity
-import com.developer.rozan.criby.view.uploadaudio.UploadAudioActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
