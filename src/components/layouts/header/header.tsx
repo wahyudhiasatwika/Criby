@@ -97,7 +97,7 @@ export default function Header({ className }: Props) {
                     </li> */}
                     <li>
                         <div className='cursor-pointer ml-2 font-medium lg:text-base md:text-sm' onClick={() => handleClick('utama')}>
-                            About Us
+                            Tentang Kami
                         </div>
                     </li>
                     <li>

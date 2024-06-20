@@ -20,15 +20,15 @@ export default function Footer({ className }: Props) {
             <div className='md:ml-auto xsm:mt-4 md:mt-4 flex items-center justify-start w-[50%] md:w-[70%]'>
                 <div className='flex md:flex-row flex-col md:gap-4 md:space-y-0 xsm:space-y-4 md:text-left'>
                     <div className='text-black text-center md:text-left'>
-                        <span className='cursor-pointer m-0 xsm:leading-loose md:text-base sm:text-sm xsm:text-xs flex flex-auto gap-2 justify-center items-center' onClick={() => scrolltoHash('utama')}>About Us</span>
+                        <span className='cursor-pointer m-0 xsm:leading-loose md:text-base sm:text-sm xsm:text-xs flex flex-auto gap-2 justify-center items-center' onClick={() => scrolltoHash('utama')}>Tentang Kami</span>
                     </div>
                     <span className="text-black opacity-50 mx-1 md:block hidden">|</span>
                     <div className='text-black text-center md:text-left'>
-                        <span className='cursor-pointer m-0 xsm:leading-loose md:text-base sm:text-sm xsm:text-xs flex flex-auto gap-2 justify-center items-center' onClick={() => scrolltoHash('fitur')}>Features</span>
+                        <span className='cursor-pointer m-0 xsm:leading-loose md:text-base sm:text-sm xsm:text-xs flex flex-auto gap-2 justify-center items-center' onClick={() => scrolltoHash('fitur')}>Fitur</span>
                     </div>
                     <span className="text-black opacity-50 mx-1 md:block hidden">|</span>
                     <div className='text-black text-center md:text-left'>
-                        <span className='cursor-pointer m-0 xsm:leading-loose md:text-base sm:text-sm xsm:text-xs flex flex-auto gap-2 justify-center items-center' onClick={() => scrolltoHash('anggota')}>Members</span>
+                        <span className='cursor-pointer m-0 xsm:leading-loose md:text-base sm:text-sm xsm:text-xs flex flex-auto gap-2 justify-center items-center' onClick={() => scrolltoHash('anggota')}>Anggota</span>
                     </div>
                 </div>
             </div>
