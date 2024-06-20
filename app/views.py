@@ -79,7 +79,7 @@ def goto_domain(request):
 
 
 def download_file(request):
-    file_path = os.path.join(settings.STATICFILES_DIRS[0], 'apk', 'name.apk')
+    file_path = os.path.join(settings.STATICFILES_DIRS[0], 'apk', 'Criby-V1.apk')
     if os.path.exists(file_path):
         with open(file_path, 'rb') as fp:
             response = HttpResponse(fp.read(), content_type='application/file')
