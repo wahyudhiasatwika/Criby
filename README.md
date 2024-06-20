@@ -12,7 +12,7 @@ An application to help mother to understand why her baby is crying.
 
 [Machine Learning - NotebookV2](https://www.kaggle.com/search?q=criby)
 
-[Machine Learning - Model Deployment](https://github.com/wahyudhiasatwika/Criby/tree/model_deployment)
+[Machine Learning - Model Deployment API](https://github.com/wahyudhiasatwika/Criby/tree/model_deployment)
 
 [Mobile Development - Android Application](https://github.com/wahyudhiasatwika/Criby/tree/master)
 
