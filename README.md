@@ -31,13 +31,14 @@ Tap to record the audio and then let your phone to the magic <br>
 Here's the result <br>
 ![Record Now!](/imgs/mobile/result.jpg)
 
+## Our Products
+Download now to see more about our products [Criby-V1.apk](https://model.criby.app/download) <br>
+[![html](https://img.shields.io/badge/Go%20To%20Criby.app-8A2BE2)](https://criby.app)
+
 
 
 ## More Tips
 Login with your Google Account to get more features such as ChatBot.
-
-## Our Products
-[![html](https://img.shields.io/badge/Go%20To%20Criby.app-8A2BE2)](https://criby.app)
 
 ## Our Teams
 | Name  | University  | Student ID | Learning Path |
