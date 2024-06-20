@@ -24,8 +24,13 @@ You will see the landing page after you open the application. <br>
 
 Right after you get the landing page click "Mulai Sekarang". Login if you have an account or Register your account first. <br>
 ![Login Page](/imgs/mobile/login.jpg) ![Register Page](/imgs/mobile/reg.jpg)
+
 Tap to record the audio and then let your phone to the magic <br>
-![Record Now!](/imgs/record.png)
+![Record Now!](/imgs/mobile/record.jpg)
+
+Here's the result <br>
+![Record Now!](/imgs/mobile/result.jpg)
+
 
 
 ## More Tips
