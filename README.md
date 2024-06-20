@@ -1,6 +1,6 @@
-# Company Profile PT. Mega Nusa Indonesia
+# Criby
 
-Company Profile for PT. Mega Nusa Indonesia made by Etech.
+Landing Page of Criby - Bangkit Academy.
 
 ## Getting Started
 
