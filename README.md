@@ -8,7 +8,7 @@ An application to help mother to understand why her baby is crying.
 ## Documentation
 [Cloud Computing - Landing Page](https://github.com/wahyudhiasatwika/Criby/tree/landing_page_development)
 
-[Machine Learning - NotebookV1](https://github.com/wahyudhiasatwika/Criby/tree/main/Machine%20Learning)
+[Machine Learning - NotebookV1](https://github.com/wahyudhiasatwika/Criby/tree/main/Machine%20Learning/Model)
 
 [Machine Learning - NotebookV2](https://www.kaggle.com/search?q=criby)
 
@@ -34,11 +34,6 @@ Here's the result <br>
 ## Our Products
 Download now to see more about our products [Criby-V1.apk](https://model.criby.app/download) <br>
 [![html](https://img.shields.io/badge/Go%20To%20Criby.app-8A2BE2)](https://criby.app)
-
-
-
-## More Tips
-Login with your Google Account to get more features such as ChatBot.
 
 ## Our Teams
 | Name  | University  | Student ID | Learning Path |
