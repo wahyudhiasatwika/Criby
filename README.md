@@ -25,3 +25,8 @@ Login with your Google Account to get more features such as ChatBot.
 | Kenny Christy Nehe | Universitas Kristen Immanuel      | A240D4KX4341       | Mobile Development    |
 | Aulia Razak Akmal | Politeknik Negeri Padang      | C132D4KY0205       | Cloud Computing |
 | Tri Wahyudi | Politeknik Negeri Padang      | C132D4KY0187      | Cloud Computing |
+
+## Source Code
+[Landing Page](https://github.com/wahyudhiasatwika/Criby/tree/landing_page_development)
+[Model](https://github.com/wahyudhiasatwika/Criby/tree/model_deployment)
+[Android Application](https://github.com/wahyudhiasatwika/Criby/tree/master)
