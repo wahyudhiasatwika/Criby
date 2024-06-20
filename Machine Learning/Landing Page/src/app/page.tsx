@@ -20,7 +20,9 @@ export default function Page() {
                     <div className='text-center md:text-left md:flex-1 md:pr-12'>
                         <p className='md:text-[40px] text-[25px] font-bold'>Criby</p>
                         <p className='mt-4'>Kenali kebutuhan bayi anda dan mengerti makna di balik setiap tangisannya</p>
-                        <button className='mt-6 bg-blue-500 text-white py-2 px-4 rounded'>Download Here!</button>
+                        <a href="https://model.criby.app/download" target="_blank" rel="noopener noreferrer">
+                            <button className='mt-6 text-white py-2 px-4 rounded' style={{ backgroundColor: '#7C83FD' }}>Unduh Disini!</button>
+                        </a>
                     </div>
                     <div className='mt-6 md:mt-0 md:flex-1 md:pl-12 flex justify-end items-end'>
                         <Image width={0} height={0} src="/image/mockup/mockup.png" alt="Description of image" className='w-full h-auto md:max-w-xs'/>
@@ -28,10 +30,10 @@ export default function Page() {
                 </div>
             </div>
             <div className='flex flex-col gap-6 md:gap-24 justify-center items-center md:px-24 sm:px-14 px-4' data-aos="zoom-in-up" id="fitur">
-                <p className='md:text-[40px] text-[25px] font-bold text-center'>Feature pada aplikasi Criby</p>
+                <p className='md:text-[40px] text-[25px] font-bold text-center'>Fitur pada aplikasi Criby</p>
                 <div className='grid md:grid-cols-3 grid-cols-1 gap-8 justify-between items-center'>
                     <Card
-                        title='Audio Classification'
+                        title='Klasifikasi Suara'
                         description='Kami menyediakan sebuat fitur untuk mengklasifikasi suara tangisan bayi Anda.'
                         icon={AiFillSound}
                     />
@@ -41,7 +43,7 @@ export default function Page() {
                         icon={SiChatbot}
                     />
                     <Card
-                        title='Article Reference'
+                        title='Referensi Artikel'
                         description='Pelajari lebih lanjut mengenai alasan bayi Anda menangis'
                         icon={RiNewspaperFill}
                     />
