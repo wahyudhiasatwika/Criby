@@ -8,9 +8,9 @@ An application to help mother to understand why her baby is crying.
 ## Documentation
 [Cloud Computing - Landing Page](https://github.com/wahyudhiasatwika/Criby/tree/landing_page_development)
 
-[Model](https://github.com/wahyudhiasatwika/Criby/tree/model_deployment)
+[Machine Learning - Model Deployment](https://github.com/wahyudhiasatwika/Criby/tree/model_deployment)
 
-[Android Application](https://github.com/wahyudhiasatwika/Criby/tree/master)
+[Mobile Development - Android Application](https://github.com/wahyudhiasatwika/Criby/tree/master)
 
 ## Usage
 Tap to record the audio and then let your phone to the magic <br>
