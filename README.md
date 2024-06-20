@@ -5,8 +5,8 @@
 # Criby
 An application to help mother to understand why her baby is crying.
 
-## Source Code
-[Landing Page](https://github.com/wahyudhiasatwika/Criby/tree/landing_page_development)
+## Documentation
+[Cloud Computing - Landing Page](https://github.com/wahyudhiasatwika/Criby/tree/landing_page_development)
 
 [Model](https://github.com/wahyudhiasatwika/Criby/tree/model_deployment)
 
